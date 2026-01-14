@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>To List</h2>
+    <ol id="todo">
+        <li>Complete Ai Skill Passport</li>
+        <li>Project Discussion</li>
+    </ol>
+    <input  id="inp" type="text">
+    <button id="bt">ADD</button>
+    <button id="re">Remove</button>
+    <script>
+        const  additem = () =>{
+            let userinput=document.querySelector("#inp").value
+            //console.log(userinput)
+            //step 2 create list item
+            let listitem=document.createElement("li")
+            listitem.textContent=userinput
+            //step3 target the list
+            let  list=document.querySelector("#todo")
+            //step 4 add item to list
+            list.appendChild(listitem)
+            //console.log(listitem)
+        }
+        let btn=document.querySelector("#bt")
+       // document.getElementById("bt")
+       btn.addEventListener("click",additem)
+        
+    </script>
+</body>
+</html>
